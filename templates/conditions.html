@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form with Inputs and Buttons</title>
+    <style>
+        /* General form styling */
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif; /* Moved font-family to body */
+            padding: 0;
+            margin: 0;
+        }
+        form {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        /* Styling labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Styling input elements */
+        input {
+            width: calc(100% - 16px); /* Adjusting for padding */
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styling buttons */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling reset button */
+        button[type="reset"] {
+            background-color: #6c757d;
+        }
+
+        /* Reset button hover effect */
+        button[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: #007BFF;
+            padding: 10px 0;
+            text-align: end;
+            margin-bottom: 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">Performance</a>
+        <a href="/WorkConditions">Working Conditions</a>
+    </header>
+
+<form method="POST">
+    <!-- Input for Productivity -->
+    <label for="productivity">Typing Speed1:</label>
+    <input min="61" max="62" type="number" id="productivity" name="productivity1" placeholder="Enter productivity level...">
+    <label for="productivity">Typing Speed2:</label>
+    <input min="61" max="62" type="number" id="productivity" name="productivity2" placeholder="Enter productivity level...">
+    <label for="productivity">Typing Speed3:</label>
+    <input min="61" max="62" type="number" id="productivity" name="productivity3" placeholder="Enter productivity level...">
+    <!-- Buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+    <h3>Result:</h3>
+    <label>Temperature: {{temps}}</label>
+    <label>Light: {{lights}}</label>
+
+</form>
+
+</body>
+</html>
